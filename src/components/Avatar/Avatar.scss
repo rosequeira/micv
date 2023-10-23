@@ -1,0 +1,19 @@
+.cont-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* border: 6px solid #333; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(20,137,183);
+    background: linear-gradient(331deg, rgba(20,137,183,1) 0%, rgba(92,107,113,1) 99%);
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+}
+

@@ -1,0 +1,29 @@
+// Extra small devices (portrait phones, less than 420px)
+@mixin xxs {
+    @media (max-width: 375px) { @content;}
+    }
+// Extra small devices (portrait phones, less than 576px)
+@mixin xs {
+    @media (max-width: 576px) {@content;}
+}
+// Small devices (landscape phones, less than 768px)
+@mixin sm {
+    @media (max-width: 768px) {@content;}
+}
+// Medium devices (tablets, less than 992px)
+@mixin md {
+    @media (max-width: 992px) {@content;}
+}
+// Large devices (desktops, less than 1200px)
+@mixin lg {
+    @media (max-width: 1200px) {@content;}
+}
+
+//compatibilizador Browser
+@mixin css3($geneBrow1, $geneBrow2) {
+    -webkit-#{$geneBrow1}: $geneBrow2;
+    -moz-#{$geneBrow1}: $geneBrow2;
+     -ms-#{$geneBrow1}: $geneBrow2;
+      -o-#{$geneBrow1}: $geneBrow2;
+         #{$geneBrow1}: $geneBrow2;
+}

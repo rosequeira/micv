@@ -1,0 +1,73 @@
+.cont-item-TL {
+    display: flex;
+
+    .left-TL {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        color: #bbbaba;
+
+        .fecha {
+            text-align: end;
+            font-size: .8rem;
+        }
+        
+        .empresa {
+            font-weight: 700;
+        }
+    }
+
+    .line-TL {
+        width: 70px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .circle {
+            width: 15px;
+            height: 15px;
+            min-height: 15px;
+            background: #1489b8;
+            border-radius: 50%;
+        }
+        
+        .borde {
+            height: 100%;
+            border-left: 1px #8f8f8f dashed;
+        }
+    }
+
+    .right-TL {
+        flex: 1;
+        padding: 0 0 1.5rem;
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0 0 1rem;
+            color: #bbbaba;
+        }
+        
+        .bajada {
+            line-height: 140%;
+            font-size: 1rem;
+            color: #bbbaba;
+            text-align: justify;
+            font-kerning: none;
+            font-weight: 300;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
