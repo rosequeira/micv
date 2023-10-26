@@ -39,3 +39,7 @@
 @each $kind, $fWeight, $fStyle in $listOpen {
 	@include font-face($fontOpen, $fontOpen/#{$fontOpen}-#{$kind} ,$fWeight ,$fStyle, woff2 woff);
 }
+
+@each $kind, $fWeight, $fStyle in $listRobotoS {
+	@include font-face($fontRobotoS, $fontRobotoS/#{$fontRobotoS}-#{$kind} ,$fWeight ,$fStyle, woff2 woff);
+}

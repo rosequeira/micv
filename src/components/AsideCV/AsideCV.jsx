@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logotipo from '../../assets/logo-ro.svg';
 import { Avatar } from '/src/components/Avatar/Avatar';
-import { faBriefcase, faMobile, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faMobile, faPaperPlane, faClipboardUser } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import './AsideCV.scss'
+import { BrowserRouter, Link } from 'react-router-dom';
 
-library.add(faMobile, faPaperPlane, faBriefcase)
+library.add(faMobile, faPaperPlane, faBriefcase, faClipboardUser)
 
 function AsideCV() {
   return (
@@ -17,6 +18,7 @@ function AsideCV() {
         <img src={logotipo} alt="" />
       </div>
         <div className="cont-data">
+        <BrowserRouter>
              <div className="data">
              <FontAwesomeIcon className="cancel-list" icon={faMobile} />
              <p>+569 511 88388</p>
@@ -28,9 +30,15 @@ function AsideCV() {
              </div>
 
              <div className="data">
-             <FontAwesomeIcon icon={faBriefcase} />
-             <p>https://rodrighos-blog.tumblr.com/</p>
+             <FontAwesomeIcon icon={faClipboardUser} />
+             <Link target={"_blank"} to="https://www.linkedin.com/in/rcsequeira/">linkedin.com/rcsequeira</Link>
              </div>
+
+             <div className="data">
+             <FontAwesomeIcon icon={faBriefcase} />
+             <Link target={"_blank"} to="https://rodrighos-blog.tumblr.com/">rodrighos-blog.tumblr.com</Link>
+             </div>
+             </BrowserRouter>
         </div>
    </div>
    

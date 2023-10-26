@@ -1,11 +1,12 @@
 import React from 'react';
-import { Home } from './components/Seccion/Home';
-import { About } from './components/Seccion/About';
+import { Home } from './components/Seccion/Home/Home';
+import { About } from './components/Seccion/About/About';
 import { Menu } from './components/Menu/Menu';
-import { Work } from './components/Seccion/Work';
+import { Work } from './components/Seccion/Work/Work';
 import './App.scss'
 import { AsideCV } from './components/AsideCV/AsideCV';
-import { TimeLine } from './components/Seccion/TimeLine';
+import { TimeLine } from './components/Seccion/TimeLine/TimeLine';
+
  
 
 function App() {

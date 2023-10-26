@@ -3,6 +3,7 @@
     flex: 1;
     padding: 3rem 1.5rem 0;
     flex-direction: column;
+    overflow: auto;
 
     .use-avatar {
         display: flex;
@@ -12,5 +13,18 @@
     
     .logotipo {
         padding: 0 0 2rem;
+    }
+    .cont-data{
+        .data a {
+            color: #bbbaba;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+
+            &:hover {
+                color: #1389b7;
+            }
+        }
     }
 }

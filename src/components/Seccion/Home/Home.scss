@@ -1,0 +1,42 @@
+.Home-sec{
+
+    .cont-sec {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1rem;
+    }
+
+    .img-portada {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 2rem;
+        align-items: center;
+        
+        img {
+            width: min(100%, 380px);
+            animation: imgPortada 10s linear 0s infinite normal forwards ;
+        }
+    }
+
+}
+
+
+
+@keyframes imgPortada {
+	0%,100% {
+		transform: translateY(0);
+	}
+
+	10%,30%,50%,70% {
+		transform: translateY(-8px);
+	}
+
+	20%,40%,60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+}

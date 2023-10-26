@@ -1,4 +1,4 @@
-import { useFetch } from "../../hooks/useFetch"
+import { useFetch } from "/src/hooks/useFetch"
 import { ItemTimeLine } from "./ItemTimeLine"
 
 function TimeLine() {
