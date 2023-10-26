@@ -1,13 +1,14 @@
 nav.cont-menu {
     display: flex;
     width: calc( 100% - 320px);
-    padding: 1rem 1rem;
+    padding: 1.3rem 2rem 1.5rem;
     position: fixed;
     top: 0;
     right: 0;
     background: #1c1b1b;
     justify-content: end;
     z-index: 999;
+    box-shadow: 0px 10px 0 0 #0000008f;
 
     // &:before {
     //     width: 20px;
