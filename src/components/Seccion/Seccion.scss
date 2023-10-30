@@ -1,3 +1,5 @@
+@import '/src/scss/abstracts/_mixins.scss';
+
 main{
     .global-seccion {
         background: #ffffff30;
@@ -5,6 +7,10 @@ main{
         border-radius: 0.4rem;
         padding: 1.5rem;
         backdrop-filter: blur(3px);
+
+        @include xs{
+            padding: 0.5rem
+        }
 
         section {
             //height: 100vh;

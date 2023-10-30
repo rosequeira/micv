@@ -1,9 +1,16 @@
+@import '/src/scss/abstracts/_mixins.scss';
+
 .aside-cv {
     display: flex;
     flex: 1;
     padding: 3rem 1.5rem 0;
     flex-direction: column;
     overflow: auto;
+
+    @include xs{
+        padding: 0;
+        overflow: hidden;
+    }
 
     .use-avatar {
         display: flex;
@@ -13,18 +20,42 @@
     
     .logotipo {
         padding: 0 0 2rem;
-    }
-    .cont-data{
-        .data a {
-            color: #bbbaba;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s;
 
-            &:hover {
-                color: #1389b7;
-            }
+        @include xs{
+            margin: auto;
+            width: min(100%, 320px);
         }
+    }
+    
+    .cont-data{
+        display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        .data{
+                gap: 1rem;
+                display: flex;
+                padding: 0 0 1rem;
+                color: #bbbaba;
+                border-bottom: 1px solid #333131;
+
+                a {
+                    color: #bbbaba;
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    transition: all 0.3s;
+        
+                    &:hover {
+                        color: #1389b7;
+                    }
+                }
+
+                p {
+                    font-size: .9rem;
+                    font-weight: 500;
+                    padding: 0;
+                }
+        }
+           
     }
 }

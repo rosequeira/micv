@@ -34,6 +34,8 @@ nav.cont-menu {
     //     bottom: -20px;
     // }
 
+
+
     .list-menu {
         display: flex;
         gap: 1rem;
@@ -53,17 +55,32 @@ nav.cont-menu {
             transition: all 0.3s;
             justify-content: center;
 
-            .btn-close{
-                color: #fff;
-            }
+            
 
             &.open{
                 transform: translate3d(0vw, 0, 0);
             }
         }
 
+        .btn-close{
+            display: none;
+
+            @include xs{
+                color: #bbbaba;
+                display: block;
+                position: absolute;
+                top: 1.3rem;
+                right: 1.3rem;
+                font-size: 1.6rem;
+
+            }
+        }
+
         .list {
             text-transform: uppercase;
+            @include xs{
+                padding: 0.4rem 0;
+            }
 
            a {
                 font-weight: 600;
@@ -102,5 +119,17 @@ nav.cont-menu {
                 width: 100%;
             }
         }
+    }
+
+    .btn-menu {
+        display: none;
+
+        @include xs{
+            display: flex;
+            align-items: center;
+            color: #bbbaba;
+            font-size: 1.5rem;
+        }
+        
     }
 }

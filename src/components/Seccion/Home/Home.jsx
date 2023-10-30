@@ -1,6 +1,7 @@
 import imgPoratada from '/src/assets/mobile-portada.png';
 import './Home.scss'
 import '../Seccion.scss'
+import { AsideCV } from '../../AsideCV/AsideCV';
 
 function Home() {
   return (
@@ -9,6 +10,10 @@ function Home() {
       
       <div className="img-portada">
         <img src={imgPoratada} alt="" />
+      </div>
+
+      <div className="perfil">
+        <AsideCV />
       </div>
 
       <div className="contenido">

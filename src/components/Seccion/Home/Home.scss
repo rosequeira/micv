@@ -12,12 +12,23 @@
             grid-template-columns: 1fr;
         }
     }
+    .perfil{
+        display: none;
+
+        @include xs{
+            display: flex;
+        }
+    }
 
     .img-portada {
         display: flex;
         justify-content: center;
         margin: 0 0 2rem;
         align-items: center;
+
+        @include xs{
+            display: none;
+        }
 
         @include md{
             align-items:flex-start; 

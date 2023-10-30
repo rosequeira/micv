@@ -5,6 +5,10 @@ h1.ti-principal {
     color: #1488b8;
     text-transform: uppercase;
     font-family: 'RobotoSlab';
+
+    @include xs{
+        font-size: 2rem;
+    }
 }
 
 h2.ti-second {
@@ -14,4 +18,7 @@ h2.ti-second {
     color: #bbbaba;
     text-transform: uppercase;
     font-family: 'RobotoSlab';
+    @include xs{
+        font-size: 1.8ßrem;
+    }
 }
