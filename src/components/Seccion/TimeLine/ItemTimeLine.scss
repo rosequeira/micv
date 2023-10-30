@@ -1,5 +1,13 @@
+@import '/src/scss/abstracts/_mixins.scss';
+
 .cont-item-TL {
     display: flex;
+
+    @include xs{
+        flex-direction: column;
+        border-bottom: 1px dashed #ccc;
+    margin: 0 0 1rem;
+    }
 
     .left-TL {
         width: 150px;
@@ -8,6 +16,16 @@
         align-items: flex-end;
         color: #bbbaba;
 
+        @include md{
+            width: 90px;
+        }
+
+        @include xs{
+            width: 100%;
+            align-items: flex-start;
+            padding: 0 0 0.8rem;
+        }
+
         .fecha {
             text-align: end;
             font-size: .8rem;
@@ -15,6 +33,11 @@
         
         .empresa {
             font-weight: 700;
+
+            @include md{
+                text-align: end;
+                padding: 0 0 0.3rem;
+            }
         }
     }
 
@@ -25,6 +48,13 @@
         align-items: center;
         flex-direction: column;
 
+        @include md{
+            width: 40px;
+        }
+        
+        @include xs{
+            display: none;
+        }
         .circle {
             width: 15px;
             height: 15px;

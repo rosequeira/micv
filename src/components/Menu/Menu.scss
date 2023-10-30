@@ -1,3 +1,5 @@
+@import '/src/scss/abstracts/_mixins.scss';
+
 nav.cont-menu {
     display: flex;
     width: calc( 100% - 320px);
@@ -9,6 +11,17 @@ nav.cont-menu {
     justify-content: end;
     z-index: 999;
     box-shadow: 0px 10px 0 0 #0000008f;
+
+    @include md{
+        width: calc( 100% - 270px);
+    }
+
+    @include sm{
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem 2rem 1rem;
+        gap: 1rem;
+    }
 
     // &:before {
     //     width: 20px;
@@ -26,6 +39,29 @@ nav.cont-menu {
         gap: 1rem;
         align-items: center;
 
+        @include xs{
+            flex-direction: column;
+            position: fixed;
+            background: #0b0b0b;
+            padding: 1rem 2rem;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            align-items: flex-start;
+            transform: translate3d(250vw, 0, 0);
+            width: 250px;
+            transition: all 0.3s;
+            justify-content: center;
+
+            .btn-close{
+                color: #fff;
+            }
+
+            &.open{
+                transform: translate3d(0vw, 0, 0);
+            }
+        }
+
         .list {
             text-transform: uppercase;
 
@@ -35,6 +71,15 @@ nav.cont-menu {
                 cursor: pointer;
                 transition: all 0.3s;
                 font-family: 'RobotoSlab';
+
+                @include sm{
+                    white-space: nowrap;
+                    font-size: 0.9rem;
+                }
+
+                @include xs{
+                    font-size: 1rem;
+                }
                 
                 &.active{
                     color: #0d6081;
@@ -47,7 +92,15 @@ nav.cont-menu {
         }
     }
 
-    img {
-        width: 190px;
+    .logotipo{
+        display: none;
+
+        @include sm{
+            display: inline-flex;
+            width: clamp(90px, 100%, 150px);
+            img {
+                width: 100%;
+            }
+        }
     }
 }

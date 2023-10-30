@@ -1,16 +1,15 @@
 @import '/src/scss/abstracts/_mixins.scss';
 
-.cont-skills {
+.group-card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
     gap: 1rem;
 
     @include md{
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    @include sm{
-        grid-template-columns: 1fr; 
+    @include xs{
+        grid-template-columns:1fr;
     }
 }

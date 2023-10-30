@@ -1,6 +1,7 @@
 import logotipo from '../../assets/logo-ro.svg';
 import { Link, animateScroll as scroll} from 'react-scroll'
 import './Menu.scss';
+import { useState } from 'react';
 
 function Menu() {
   const itemMenu = [
@@ -9,13 +10,19 @@ function Menu() {
     {title: 'Portafolio', id: 'work'},
     {title: 'Datos laborales', id: 'time-line'},
   ]
+
+  const [menuXs, setMenuXs] = useState(false);
+  const menuMobile = () => {
+    setMenuXs((prevValue) => !prevValue);
+  }
   return (
     <nav className='cont-menu'>
-      {/* <div className="logotipo" >
+      <div className="logotipo" >
         <img src={logotipo} alt="" />
-      </div> */}
+      </div>
       
-      <div className="list-menu">
+      <div className={` ${menuXs ? 'open' : 'close'} list-menu`} >
+        <div className="btn-close" onClick={menuMobile}>X</div>
         {itemMenu.map((item) => (
           <div key={item.id} className="list">
             <Link 
@@ -29,6 +36,7 @@ function Menu() {
           </div>
         ))}
       </div>
+      <div className="btn-menu" onClick={menuMobile}>fk</div>
   </nav>
   )
 }

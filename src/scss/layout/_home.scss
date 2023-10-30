@@ -14,6 +14,14 @@
         top: 0;
         left: 0;
 
+        @include md{
+            width: 270px;
+        }
+
+        @include sm{
+            display: none;
+        }
+
         aside {
             display: flex;
             flex: 1;
@@ -45,6 +53,14 @@
     .right {
         //display: flex;
         width: calc(100% - 320px);
+
+        @include md{
+            width: calc(100% - 270px);
+        }
+
+        @include sm{
+            width: 100%;
+        }
 
         main {
             flex: 1;
