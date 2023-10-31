@@ -1,7 +1,7 @@
 import logotipo from '../../assets/logo-ro.svg';
 import { Link, animateScroll as scroll} from 'react-scroll'
 import './Menu.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,13 +21,7 @@ function Menu() {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener('resize', menuMobile);
-
-    return () => {
-      window.removeEventListener('resize', menuMobile);
-    };
-  }, []);
+  console.log('fuera', menuXs)
 
   return (
     <nav className='cont-menu'>
