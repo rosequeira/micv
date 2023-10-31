@@ -21,8 +21,6 @@ function Menu() {
     }
   };
 
-  console.log('fuera', menuXs)
-
   return (
     <nav className='cont-menu'>
       <div className="logotipo" >
