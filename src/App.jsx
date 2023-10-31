@@ -6,6 +6,7 @@ import { Work } from './components/Seccion/Work/Work';
 import './App.scss'
 import { AsideCV } from './components/AsideCV/AsideCV';
 import { TimeLine } from './components/Seccion/TimeLine/TimeLine';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 
  
 
@@ -14,6 +15,7 @@ function App() {
     <>
    
     <div className="container">
+    <ProgressBar/>
       <div className="left">
         <aside>
           <AsideCV />

@@ -1,7 +1,7 @@
 import logotipo from '../../assets/logo-ro.svg';
 import { Link, animateScroll as scroll} from 'react-scroll'
 import './Menu.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,9 +14,21 @@ function Menu() {
   ]
 
   const [menuXs, setMenuXs] = useState(false);
+  
   const menuMobile = () => {
-    setMenuXs((prevValue) => !prevValue);
-  }
+    if (window.innerWidth <= 576) {
+      setMenuXs((prevValue) => !prevValue);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', menuMobile);
+
+    return () => {
+      window.removeEventListener('resize', menuMobile);
+    };
+  }, []);
+
   return (
     <nav className='cont-menu'>
       <div className="logotipo" >
@@ -33,13 +45,16 @@ function Menu() {
             spy={true} 
             smooth={true} 
             offset={50} 
-            duration={500} 
+            duration={500}
+            onClick={menuMobile}
             >{item.title}</Link>
           </div>
         ))}
       </div>
       <div className="btn-menu" onClick={menuMobile}><FontAwesomeIcon icon={faBars} /></div>
+      
   </nav>
+
   )
 }
 
