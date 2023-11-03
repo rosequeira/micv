@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logotipo from '../../assets/logo-ro.svg';
 import { Avatar } from '/src/components/Avatar/Avatar';
-import { faBriefcase, faMobile, faPaperPlane, faClipboardUser } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faMobile, faPaperPlane, faClipboardUser, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import './AsideCV.scss'
 import { BrowserRouter, Link } from 'react-router-dom';
 
-library.add(faMobile, faPaperPlane, faBriefcase, faClipboardUser)
+library.add(faMobile, faPaperPlane, faBriefcase, faClipboardUser, faFilePdf)
 
 function AsideCV() {
   return (
@@ -37,6 +37,11 @@ function AsideCV() {
              <div className="data">
              <FontAwesomeIcon icon={faBriefcase} />
              <Link target={"_blank"} to="https://rodrighos-blog.tumblr.com/">rodrighos-blog.tumblr.com</Link>
+             </div>
+
+             <div className="data">
+             <FontAwesomeIcon icon={faFilePdf} />
+             <Link download target={"_blank"} to="src/assets/cv-rodrigo-cortes.pdf">Descargar CV</Link>
              </div>
              </BrowserRouter>
         </div>
