@@ -41,7 +41,7 @@ function AsideCV() {
 
              <div className="data">
              <FontAwesomeIcon icon={faFilePdf} />
-             <Link download target={"_blank"} to="src/assets/cv-rodrigo-cortes.pdf">Descargar CV</Link>
+             <Link download target={"_blank"} to="./src/assets/cv-rodrigo-cortes.pdf">Descargar CV</Link>
              </div>
              </BrowserRouter>
         </div>
