@@ -7,6 +7,7 @@ import './App.scss'
 import { AsideCV } from './components/AsideCV/AsideCV';
 import { TimeLine } from './components/Seccion/TimeLine/TimeLine';
 import ProgressBar from './components/ProgressBar/ProgressBar';
+import Footer from './components/Footer/Footer';
 
  
 
@@ -16,25 +17,29 @@ function App() {
    
     <div className="container">
     <ProgressBar/>
-      <div className="left">
-        <aside>
+      
+        <aside className="left">
           <AsideCV />
         </aside>
-      </div>
-      <div className="right">
-        <header>
-         
-        </header>
-        <main>
-        <Menu />
-        <div className="global-seccion">
-        <Home/>
-          <About/>
-          <Work />
-          <TimeLine />
-        </div>
+      
+        
+        <main className="right">
+          <header>
+            <Menu />
+          </header>
+        
+          <div className="global-seccion">
+            <Home/>
+            <About/>
+            <Work />
+            <TimeLine />
+          </div>
         </main>
-      </div>
+
+        <footer className='cont-foot'>
+            <Footer/>
+          </footer>
+        
     </div>
     
 

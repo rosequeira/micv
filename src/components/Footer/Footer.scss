@@ -1,0 +1,15 @@
+@import '/src/scss/abstracts/_mixins.scss';
+@import '/src/scss/abstracts/_variables.scss';
+
+.Footer {
+    width: 100%;
+    background: #000;
+    padding: 1rem 2rem;
+
+    p{
+        font-size: 0.9rem;
+        font-style: italic;
+        padding: 0.3rem 0;
+        color: $gris10;
+    }
+}

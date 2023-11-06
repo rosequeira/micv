@@ -2,7 +2,7 @@ h1.ti-principal {
     font-size: 3rem;
     padding: 2rem 0 3rem;
     font-weight: 900;
-    color: #1488b8;
+    color: $cian;
     text-transform: uppercase;
     font-family: 'RobotoSlab';
 
@@ -15,7 +15,7 @@ h2.ti-second {
     font-size: 2rem;
     padding: 2rem 0 3rem;
     font-weight: 900;
-    color: #bbbaba;
+    color: $gris10;
     text-transform: uppercase;
     font-family: 'RobotoSlab';
     @include xs{

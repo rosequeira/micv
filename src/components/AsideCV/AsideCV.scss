@@ -1,4 +1,5 @@
 @import '/src/scss/abstracts/_mixins.scss';
+@import '/src/scss/abstracts/_variables.scss';
 
 .aside-cv {
     display: flex;
@@ -35,11 +36,11 @@
                 gap: 1rem;
                 display: flex;
                 padding: 0 0 1rem;
-                color: #bbbaba;
+                color: $gris10;
                 border-bottom: 1px solid #333131;
 
                 a {
-                    color: #bbbaba;
+                    color: $gris10;
                     text-decoration: none;
                     font-size: 0.9rem;
                     font-weight: 500;
