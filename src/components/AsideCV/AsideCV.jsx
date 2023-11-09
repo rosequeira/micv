@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logotipo from '../../assets/logo-ro.svg';
 import { Avatar } from '/src/components/Avatar/Avatar';
-import { faBriefcase, faMobile, faPaperPlane, faClipboardUser, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faMobile, faPaperPlane, faClipboardUser, faFilePdf, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import './AsideCV.scss'
 import { BrowserRouter, Link } from 'react-router-dom';
 import { PDF } from '../../utils/constant';
 
-library.add(faMobile, faPaperPlane, faBriefcase, faClipboardUser, faFilePdf)
+library.add(faMobile, faPaperPlane, faBriefcase, faClipboardUser, faFilePdf, faCodeBranch)
 
 function AsideCV() {
   const pdf = PDF
@@ -34,6 +34,11 @@ function AsideCV() {
              <div className="data">
              <FontAwesomeIcon icon={faClipboardUser} />
              <Link target={"_blank"} to="https://www.linkedin.com/in/rcsequeira/">linkedin.com/rcsequeira</Link>
+             </div>
+
+             <div className="data">
+             <FontAwesomeIcon icon={faCodeBranch} />
+             <Link target={"_blank"} to="https://github.com/rosequeira">@github.com/rosequeira</Link>
              </div>
 
              <div className="data">
