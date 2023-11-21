@@ -1,104 +1,102 @@
-@import '/src/scss/abstracts/_mixins.scss';
-@import '/src/scss/abstracts/_variables.scss';
+@import "/src/scss/abstracts/_mixins.scss";
+@import "/src/scss/abstracts/_variables.scss";
 
 .cont-item-TL {
-    display: flex;
+  display: flex;
 
-    @include xs{
-        flex-direction: column;
-        border-bottom: 1px dashed #ccc;
+  @include xs {
+    flex-direction: column;
+    border-bottom: 1px dashed #ccc;
     margin: 0 0 1rem;
+  }
+
+  .left-TL {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: $gris10;
+
+    @include md {
+      width: 90px;
     }
 
-    .left-TL {
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        color: $gris10;
-
-        @include md{
-            width: 90px;
-        }
-
-        @include xs{
-            width: 100%;
-            align-items: flex-start;
-            padding: 0 0 0.8rem;
-        }
-
-        .fecha {
-            text-align: end;
-            font-size: .8rem;
-        }
-        
-        .empresa {
-            font-weight: 700;
-
-            @include md{
-                text-align: end;
-                padding: 0 0 0.3rem;
-            }
-        }
+    @include xs {
+      width: 100%;
+      align-items: flex-start;
+      padding: 0 0 0.8rem;
     }
 
-    .line-TL {
-        width: 70px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-
-        @include md{
-            width: 40px;
-        }
-        
-        @include xs{
-            display: none;
-        }
-        .circle {
-            width: 15px;
-            height: 15px;
-            min-height: 15px;
-            background: #1489b8;
-            border-radius: 50%;
-        }
-        
-        .borde {
-            height: 100%;
-            border-left: 1px #8f8f8f dashed;
-        }
+    .fecha {
+      text-align: end;
+      font-size: 0.8rem;
     }
 
-    .right-TL {
-        flex: 1;
-        padding: 0 0 1.5rem;
+    .empresa {
+      font-weight: 700;
 
-        .title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            padding: 0 0 1rem;
-            color: $gris10;
-        }
-        
-        .bajada {
-            line-height: 140%;
-            font-size: 1rem;
-            color: $gris10;
-            text-align: justify;
-            font-kerning: none;
-            font-weight: 300;
-        }
+      @include md {
+        text-align: end;
+        padding: 0 0 0.3rem;
+      }
     }
+  }
+
+  .line-TL {
+    width: 70px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include md {
+      width: 40px;
+    }
+
+    @include xs {
+      display: none;
+    }
+    .circle {
+      width: 15px;
+      height: 15px;
+      min-height: 15px;
+      background: #1489b8;
+      border-radius: 50%;
+    }
+
+    .borde {
+      height: 100%;
+      border-left: 1px #8f8f8f dashed;
+    }
+  }
+
+  .right-TL {
+    flex: 1;
+    padding: 0 0 1.5rem;
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0 0 0.3rem;
+      color: $gris10;
+    }
+
+    .apti {
+      margin: 0 0 1rem;
+      color: $gris10;
+      font-size: 0.8rem;
+      font-family: "OpenSans";
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .bajada {
+      line-height: 140%;
+      font-size: 1rem;
+      color: $gris10;
+      text-align: justify;
+      font-kerning: none;
+      font-weight: 300;
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
