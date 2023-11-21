@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Events } from 'react-scroll';
-import './ProgressBar.scss';
+import React, { useState, useEffect } from "react";
+import { Events } from "react-scroll";
+import "./ProgressBar.scss";
 
 const ProgressBar = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -17,14 +17,14 @@ const ProgressBar = () => {
   };
 
   useEffect(() => {
-    Events.scrollEvent.register('begin', () => {});
-    Events.scrollEvent.register('end', () => {});
-    window.addEventListener('scroll', handleScroll);
+    Events.scrollEvent.register("begin", () => {});
+    Events.scrollEvent.register("end", () => {});
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-      window.removeEventListener('scroll', handleScroll);
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -32,7 +32,9 @@ const ProgressBar = () => {
     <div
       className="progress-bar"
       style={{
-        background: `linear-gradient(to right, #591180 ${scrollPercentage - 10}%, #0b5371 ${scrollPercentage}%)`,
+        background: `linear-gradient(to right, #591180 ${
+          scrollPercentage - 10
+        }%, #0b5371 ${scrollPercentage}%)`,
       }}
     ></div>
   );

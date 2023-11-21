@@ -1,12 +1,12 @@
-import './Avatar.scss';
-import avatar from '../../assets/avatar.jpeg'
+import "./Avatar.scss";
+import avatar from "../../assets/avatar.jpeg";
 
 function Avatar() {
   return (
     <div className="cont-avatar">
-        <img src={avatar} alt="" />
+      <img src={avatar} alt="" />
     </div>
-  )
+  );
 }
 
-export { Avatar }
+export { Avatar };
